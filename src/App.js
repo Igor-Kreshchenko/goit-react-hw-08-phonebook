@@ -1,22 +1,24 @@
 import React from 'react';
-import Section from './components/Section';
-import ContactForm from './components/ContactForm';
-import ContactList from './components/ContactList';
-import Filter from './components/Filter';
-import styles from './App.module.css';
+import Container from './components/Container';
+import AppBar from './components/AppBar';
+import HomeView from './views/HomeView';
+import RegisterView from './views/RegisterView';
+import LoginView from './views/LoginView';
+import ContactsView from './views/ContactsView';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className={styles.wrapper}>
-      <Section title="Phonebook">
-        <ContactForm />
-      </Section>
+    <Container>
+      <AppBar />
 
-      <Section title="Contacts">
-        <Filter />
-        <ContactList />
-      </Section>
-    </div>
+      <Switch>
+        <Route exact path="/" component={HomeView} />
+        <Route path="/register" component={RegisterView} />
+        <Route path="/login" component={LoginView} />
+        <Route path="/contacts" component={ContactsView} />
+      </Switch>
+    </Container>
   );
 };
 
