@@ -5,7 +5,11 @@ import ContactItem from './ContactItem';
 import Loader from '../Loader';
 import styles from './ContactList.module.css';
 import { fetchContacts } from '../../redux/contacts/contacts-operations';
-import { getFilteredContacts, getIsLoading, getError } from '../../redux/contacts/contacts-selectors';
+import {
+  getFilteredContacts,
+  getIsLoading,
+  getError,
+} from '../../redux/contacts/contacts-selectors';
 
 class ContactList extends Component {
   componentDidMount() {
@@ -32,7 +36,7 @@ class ContactList extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   contacts: getFilteredContacts(state),
   isLoadingContacts: getIsLoading(state),
   error: getError(state),
@@ -47,7 +51,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(ContactList);
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
     }),
