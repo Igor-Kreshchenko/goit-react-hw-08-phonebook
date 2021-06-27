@@ -1,10 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { authSelectors } from '../../redux/auth';
 import Navigation from '../Navigation';
 import AuthNav from '../AuthNav';
 import UserMenu from '../UserMenu';
 import styles from './AppBar.module.css';
-import { connect } from 'react-redux';
-import { authSelectors } from '../../redux/auth';
 
 const AppBar = ({ isAuthenticated }) => (
   <header className={styles.Header}>

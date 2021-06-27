@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import ContactItem from './ContactItem';
-import Loader from '../Loader';
-import styles from './ContactList.module.css';
 import { fetchContacts } from '../../redux/contacts/contacts-operations';
 import {
   getFilteredContacts,
   getIsLoading,
   getError,
 } from '../../redux/contacts/contacts-selectors';
+import ContactItem from './ContactItem';
+import Loader from '../Loader';
+import styles from './ContactList.module.css';
 
 class ContactList extends Component {
   componentDidMount() {
