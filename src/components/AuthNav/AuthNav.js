@@ -10,7 +10,7 @@ const AuthNav = () => (
       activeClassName={styles.activeLink}
       exact
     >
-      Регистрация
+      Sign Up
     </NavLink>
     <NavLink
       to="/login"
@@ -18,7 +18,7 @@ const AuthNav = () => (
       className={styles.link}
       activeClassName={styles.activeLink}
     >
-      Логин
+      Sign In
     </NavLink>
   </div>
 );

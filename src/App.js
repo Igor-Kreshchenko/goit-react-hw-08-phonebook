@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 import Loader from './components/Loader';
-import Container from './components/Container';
+import { Container } from '@material-ui/core';
 import AppBar from './components/AppBar';
 
 const HomeView = lazy(() => import('./views/HomeView'));
-const RegisterView = lazy(() => import('./views/RegisterView'));
-const LoginView = lazy(() => import('./views/LoginView'));
+const RegisterView = lazy(() => import('./views/RegisterView/RegisterView'));
+const LoginView = lazy(() => import('./views/LoginView/LoginView'));
 const ContactsView = lazy(() => import('./views/ContactsView'));
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{ paddingTop: '100px' }}>
         <AppBar />
 
         <Suspense fallback={<Loader />}>
