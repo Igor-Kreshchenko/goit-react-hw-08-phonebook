@@ -9,11 +9,11 @@ class TodosView extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <Section title="Add Contact">
+        <Section title="Add new contact">
           <ContactForm />
         </Section>
 
-        <Section title="Contacts">
+        <Section title="All contacts">
           <Filter />
           <ContactList />
         </Section>

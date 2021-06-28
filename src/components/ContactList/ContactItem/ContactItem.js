@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { IconButton } from '@material-ui/core';
+import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import { deleteContact } from '../../../redux/contacts/contacts-operations';
 import { connect } from 'react-redux';
 import styles from '../ContactList.module.css';
@@ -9,13 +11,15 @@ const ContactItem = ({ id, name, number, onClick }) => {
     <li className={styles.item}>
       <p className={styles.name}>{name}</p>
       <p className={styles.number}>{number}</p>
-      <button
+      <IconButton
+        aria-label="delete"
+        color="primary"
         className={styles.button}
         type="button"
         onClick={() => onClick(id)}
       >
-        Delete
-      </button>
+        <DeleteOutlinedIcon />
+      </IconButton>
     </li>
   );
 };
