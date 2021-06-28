@@ -4,11 +4,11 @@ import { authOperations } from './redux/auth';
 import { connect } from 'react-redux';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
-import Loader from './components/Loader';
 import { Container } from '@material-ui/core';
+import Loader from './components/Loader';
 import AppBar from './components/AppBar';
 
-const HomeView = lazy(() => import('./views/HomeView'));
+const HomeView = lazy(() => import('./views/HomeView/HomeView'));
 const RegisterView = lazy(() => import('./views/RegisterView/RegisterView'));
 const LoginView = lazy(() => import('./views/LoginView/LoginView'));
 const ContactsView = lazy(() => import('./views/ContactsView'));
