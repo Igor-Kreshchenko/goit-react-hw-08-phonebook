@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 import ContactList from '../components/ContactList';
 import Filter from '../components/Filter';
 
-class TodosView extends Component {
+class ContactsView extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
@@ -22,4 +22,4 @@ class TodosView extends Component {
   }
 }
 
-export default TodosView;
+export default ContactsView;
